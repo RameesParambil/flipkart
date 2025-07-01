@@ -14,10 +14,52 @@ import c9 from '../assets/Category/9.jpg';
 
 
 const Categories = () => {
-  return (
-    <div className='w-[100%] h-[30vh] p-[10px] bg-[#F1F2F4]'>
-        <div className='w-[100%] h-[100%] bg-white'>
-            <CatCart />
+    let categoryArr = [
+    {
+        name : "Kilos",
+        img : c1
+    },
+    {
+        name : "Mobiles",
+        img : c2
+    },
+    {
+        name : "Fasion",
+        img : c3
+    },
+    {
+        name : "Electronics",
+        img : c4
+    },
+    {
+        name : "Furniture",
+        img : c5
+    },
+    {
+        name : "Appliances",
+        img : c6
+    },
+    {
+        name : "Flight Booking",
+        img : c7
+    },
+    {
+        name : "Toys",
+        img : c8
+    },
+    {
+        name : "Two Wheelers",
+        img : c9
+    },
+]
+  return ( 
+    <div className='w-[100%] h-[30vh] p-[10px] bg-[#F1F2F4] '>
+        <div className='w-[100%] h-[100%] bg-white flex gap-2'>
+            {
+                categoryArr.map((obj)=>{
+                    return(<CatCart name={obj.name} img={obj.img}/> )
+                })
+            }
         </div>
     </div>
   )
